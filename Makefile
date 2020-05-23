@@ -1,0 +1,2 @@
+test:
+	open ./index.html

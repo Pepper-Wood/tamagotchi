@@ -1,7 +1,7 @@
 class Egg extends Animatable {
   constructor(canvas) {
     super(canvas, 32);
-    const egg = new Sprite('images/Egg.png', 192, 32, 6, 1);
+    const egg = new Sprite('img/sprites/Egg.png', 192, 32, 6, 1);
 
     this.animations = {
       egg: egg.get(0),

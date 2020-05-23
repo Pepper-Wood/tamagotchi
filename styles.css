@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: 'VT323', monospace;
-  background-image: url(tamabg.jpg);
+  background-image: url(img/tamabg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -88,16 +88,16 @@ body {
 .to_col4   { left: 144px; }
 .to_col5   { left: 189px; }
 
-#tama_options_stats      { background-image: url("icon_stats.png");      }
-#tama_options_food       { background-image: url("icon_food.png");       }
-#tama_options_toilet     { background-image: url("icon_toilet.png");     }
-#tama_options_games      { background-image: url("icon_games.png");      }
-#tama_options_connect    { background-image: url("icon_connect.png");    }
-#tama_options_discipline { background-image: url("icon_discipline.png"); }
-#tama_options_medicine   { background-image: url("icon_medicine.png");   }
-#tama_options_lights     { background-image: url("icon_lights.png");     }
-#tama_options_guestbook  { background-image: url("icon_guestbook.png");  }
-#tama_options_attention  { background-image: url("icon_attention.png");  }
+#tama_options_stats      { background-image: url("img/icons/stats.png");      }
+#tama_options_food       { background-image: url("img/icons/food.png");       }
+#tama_options_toilet     { background-image: url("img/icons/toilet.png");     }
+#tama_options_games      { background-image: url("img/icons/games.png");      }
+#tama_options_connect    { background-image: url("img/icons/connect.png");    }
+#tama_options_discipline { background-image: url("img/icons/discipline.png"); }
+#tama_options_medicine   { background-image: url("img/icons/medicine.png");   }
+#tama_options_lights     { background-image: url("img/icons/lights.png");     }
+#tama_options_guestbook  { background-image: url("img/icons/guestbook.png");  }
+#tama_options_attention  { background-image: url("img/icons/attention.png");  }
 
 .game__options {
   display: none;

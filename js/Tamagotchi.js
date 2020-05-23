@@ -3,9 +3,9 @@ class Tamagotchi extends Animatable {
   constructor(canvas) {
     super(canvas);
 
-    const idle = new Sprite('babytchi_g.png', 64, 32, 2, 1);
-    const eat = new Sprite('images/Eat.png', 640, 240, 4, 2);
-    const other = new Sprite('images/Other.png', 240, 360, 2, 3);
+    const idle = new Sprite('img/sprites/babytchi_g.png', 64, 32, 2, 1);
+    const eat = new Sprite('img/sprites/Eat.png', 640, 240, 4, 2);
+    const other = new Sprite('img/sprites/Other.png', 240, 360, 2, 3);
 
     this.animations = {
       dislike: other.get(2),
