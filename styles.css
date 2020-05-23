@@ -2,7 +2,21 @@ body {
   display: flex;
   justify-content: center;
   font-family: 'VT323', monospace;
-  background-color: #232980;
+  background-image: url(tamabg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: none !important;
+}
+
+#finger {
+  z-index: 100;
+  position: absolute;
+  pointer-events: none;
 }
 
 .game {
@@ -12,61 +26,85 @@ body {
 
 .game__body {
   position: relative;
-}
-
-.game__body svg {
   width: 800px;
-  fill: deeppink;
 }
 
 .controls {
   position: absolute;
-  top: 718px;
-  left: 297px;
+  top: 448px;
+  left: 301px;
 }
 
 .controls__button {
   position: absolute;
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: yellow;
-  cursor: pointer;
-}
-
-.controls__button:hover {
-  background-color: #d6d603;
 }
 
 .controls__button:nth-child(2) {
-  top: 20px;
-  left: 79px;
+  top: 19px;
+  left: 72px;
 }
 
 .controls__button:nth-child(3) {
-  left: 160px;
+  left: 142px
 }
 
 .game__screen {
   position: absolute;
-  top: 360px;
-  left: 260px;
-  background: #efefef;
-  width: 280px;
-  height: 280px;
-  border-radius: 16px;
+  top: 189px;
+  left: 286px;
+  width: 228px;
+  height: 234px;
+  border-radius: 11px;
 }
 
 .game__screen canvas {
   position: absolute;
+  top: 40px;
+  left: 38px;
 }
+
+.tama_options {
+  display: none;
+  position: absolute;
+}
+.tama_options > div {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0.2;
+  background-size: contain;
+}
+.tama_options .tama_options_active {
+  opacity: 1;
+}
+.to_top    { top:    2px; }
+.to_bottom { top:  199px; }
+.to_col1   { left:   8px; }
+.to_col2   { left:  54px; }
+.to_col3   { left:  99px; }
+.to_col4   { left: 144px; }
+.to_col5   { left: 189px; }
+
+#tama_options_stats      { background-image: url("icon_stats.png");      }
+#tama_options_food       { background-image: url("icon_food.png");       }
+#tama_options_toilet     { background-image: url("icon_toilet.png");     }
+#tama_options_games      { background-image: url("icon_games.png");      }
+#tama_options_connect    { background-image: url("icon_connect.png");    }
+#tama_options_discipline { background-image: url("icon_discipline.png"); }
+#tama_options_medicine   { background-image: url("icon_medicine.png");   }
+#tama_options_lights     { background-image: url("icon_lights.png");     }
+#tama_options_guestbook  { background-image: url("icon_guestbook.png");  }
+#tama_options_attention  { background-image: url("icon_attention.png");  }
 
 .game__options {
   display: none;
   position: absolute;
-  background: #efefef;
-  width: 280px;
-  height: 280px;
+  width: 228px;
+  height: 234px;
+  border: 1px dotted #000;
   border-radius: 16px;
 }
 
@@ -81,7 +119,6 @@ body {
   color: #666;
   font-family: 'VT323';
   font-size: 80px;
-  cursor: pointer;
 }
 
 .game__options > div:hover {
@@ -99,4 +136,16 @@ body {
 
 .animation {
   bottom: 4%;
+}
+
+#debug {
+  display: none;
+  background-color: #000;
+  color: #FFF;
+  border: 1px solid #FFF;
+  position: fixed;
+  font-size: 20px;
+  padding: 10px;
+  top: 0;
+  left: 0;
 }

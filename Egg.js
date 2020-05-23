@@ -1,7 +1,7 @@
 class Egg extends Animatable {
   constructor(canvas) {
-    super(canvas, 180);
-    const egg = new Sprite('images/Egg.png', 900, 120, 5, 1);
+    super(canvas, 32);
+    const egg = new Sprite('images/Egg.png', 192, 32, 6, 1);
 
     this.animations = {
       egg: egg.get(0),
@@ -17,11 +17,10 @@ class Egg extends Animatable {
 
     function* animation() {
       while (max > 0) {
-        yield* frame(2);
-        yield* frame(3);
-        yield* frame(4);
-        yield* frame(3);
-        yield* frame(2);
+        yield* frame(0);
+        yield* frame(0);
+        yield* frame(1);
+        yield* frame(1);
         max--;
       }
     };
@@ -34,8 +33,12 @@ class Egg extends Animatable {
 
     function* animation() {
       yield* frame(2);
-      yield* frame(1);
-      yield* frame(0);
+      yield* frame(3);
+      yield* frame(2);
+      yield* frame(3);
+      yield* frame(2);
+      yield* frame(3);
+      yield* frame(5); // only showing girl hatching for now. Should be frame(4) for boy.
     };
 
     return animation.call(this);
@@ -43,7 +46,7 @@ class Egg extends Animatable {
 
   hatch() {
     function* animation() {
-      yield* this.bounce(3);
+      yield* this.bounce(3); // TODO make this longer when ready.
       yield* this.break();
     };
 

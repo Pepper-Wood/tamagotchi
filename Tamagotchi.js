@@ -1,8 +1,9 @@
+// Evolution reference: https://3.bp.blogspot.com/-S1LCMlHy4hY/V2568iPlQ3I/AAAAAAAAAOg/h1onugXX5UobkJqVAsLuUiIiaPPh3WukgCLcB/s1600/v1%2BGC.png
 class Tamagotchi extends Animatable {
   constructor(canvas) {
     super(canvas);
 
-    const idle = new Sprite('images/Idle.png', 360, 120, 3, 1);
+    const idle = new Sprite('babytchi_g.png', 64, 32, 2, 1);
     const eat = new Sprite('images/Eat.png', 640, 240, 4, 2);
     const other = new Sprite('images/Other.png', 240, 360, 2, 3);
 
@@ -115,9 +116,6 @@ class Tamagotchi extends Animatable {
     function* animation() {
       yield* frame(0);
       yield* frame(1);
-      yield* frame(2);
-      yield* frame(1);
-      yield* frame(0);
     };
 
     return animation.call(this);
